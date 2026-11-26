@@ -1,0 +1,30 @@
+# Real models. Set the API keys for the providers you use:
+#   ANTHROPIC_API_KEY, OPENAI_API_KEY, GEMINI_API_KEY
+# Model names change often; replace them with the ones your account has.
+# Roles are free text: add, remove or rewrite agents to fit your team.
+
+[run]
+rounds = 7
+stop_on_consensus = true
+
+[[agents]]
+name = "Security reviewer"
+role = "Find security, privacy and abuse risks. Think like an attacker."
+provider = "anthropic"
+model = "claude-sonnet-4-5"
+
+[[agents]]
+name = "Implementer"
+role = "Check that an engineer could build this without guessing. Flag vague requirements."
+provider = "openai"
+model = "gpt-4o"
+
+[[agents]]
+name = "Skeptic"
+role = "Challenge assumptions, look for missing edge cases and contradictions."
+provider = "gemini"
+model = "gemini-2.0-flash"
+
+[editor]
+provider = "anthropic"
+model = "claude-sonnet-4-5"

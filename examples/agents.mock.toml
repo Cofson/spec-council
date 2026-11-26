@@ -1,0 +1,22 @@
+# Offline demo: no API keys needed.
+[run]
+rounds = 7
+stop_on_consensus = true
+
+[[agents]]
+name = "Security reviewer"
+role = "Find security, privacy and abuse risks."
+provider = "mock"
+
+[[agents]]
+name = "Implementer"
+role = "Check that an engineer could build this without guessing."
+provider = "mock"
+
+[[agents]]
+name = "Skeptic"
+role = "Challenge assumptions and look for missing edge cases."
+provider = "mock"
+
+[editor]
+provider = "mock"
